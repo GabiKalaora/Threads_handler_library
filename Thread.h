@@ -63,7 +63,7 @@ private:
     sigjmp_buf env;
     State state;
     int quantum;
-    bool mutex_block;
+    bool blocked_by_mutex;
 
 
 public:

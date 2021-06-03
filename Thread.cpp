@@ -32,7 +32,7 @@ int Thread::get_quantum() const {
 }
 
 int Thread::get_mutex_blocked_state() const {
-    return mutex_block;
+    return blocked_by_mutex;
 }
 
 void Thread::set_state(State new_state) {
@@ -44,7 +44,7 @@ void Thread::inc_quantum() {
 }
 
 void Thread::set_mutex_blocked_state(bool state) {
-    mutex_block = state;
+    blocked_by_mutex = state;
 }
 
 Thread::~Thread() {
